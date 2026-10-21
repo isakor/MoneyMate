@@ -21,26 +21,35 @@ The application helps users manage their income, expenses, and monthly budgets t
 - Bootstrap
 - JavaScript / Chart.js
 
+
 ## 🚀 Getting Started
 
-**Requirements:** .NET 10 SDK and an initialized SQLite database.
+**Requirements:** .NET 10 SDK and EF Core CLI tools.
 
-1. Clone the repository and open the project folder.
-2. Restore dependencies and start the application:
+1. Clone the repository and open the MoneyMate project folder.
 
-```bash
-dotnet restore
-dotnet run
-```
+2. Restore the project dependencies:
 
-3. Open the local URL shown in the terminal.
+   ```bash
+   dotnet restore
+   ```
 
-## 🧪 Testing
+3. Install the EF Core CLI tool if it is not already installed:
 
-The application has been manually tested, including transaction management, budget management, filtering, charts, and input validation.
+   ```bash
+   dotnet tool install --global dotnet-ef
+   ```
 
-All 14 functional tests passed.
+4. Create the SQLite database using the existing migrations:
 
-## 🎥 Demo
+   ```bash
+   dotnet ef database update
+   ```
 
-[▶ Watch MoneyMate Demo on YouTube](https://www.youtube.com/watch?v=Q9am8s1yUKE)
+5. Start the application:
+
+   ```bash
+   dotnet run
+   ```
+
+6. Open the local URL shown in the terminal.
