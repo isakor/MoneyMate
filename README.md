@@ -7,49 +7,77 @@ The application helps users manage their income, expenses, and monthly budgets t
 
 ## ✨ Features
 
-- **Transaction Management** – Add, edit, delete, and filter transactions.
-- **Budget Management** – Create and manage monthly budgets.
-- **Financial Dashboard** – Track income, expenses, and balance.
-- **Charts** – Visualize spending by category and monthly finances.
-- **Filtering** – Filter financial data by month and year.
+- **Transaction Management** – Add, edit, delete, and filter income and expenses.
+- **Budget Management** – Create, edit, and delete monthly budgets.
+- **Financial Dashboard** – Track income, expenses, balance, and remaining budget.
+- **Charts** – Visualize expenses by category and compare monthly income and expenses.
+- **Filtering** – View financial data by month and year.
+- **Input Validation** – Prevent invalid transaction and budget entries.
 
 ## 🛠️ Technologies
 
-- ASP.NET Core MVC / C#
+- C# and ASP.NET Core MVC
 - Entity Framework Core
 - SQLite
-- Bootstrap
-- JavaScript / Chart.js
-
+- HTML and Bootstrap
+- JavaScript and Chart.js
 
 ## 🚀 Getting Started
 
-**Requirements:** .NET 10 SDK and EF Core CLI tools.
+**Requirements:** .NET 10 SDK.
 
-1. Clone the repository and open the MoneyMate project folder.
+1. Clone the repository:
 
-2. Restore the project dependencies:
+   ```bash
+   git clone https://github.com/isakor/MoneyMate.git
+   ```
+
+2. Open the project folder:
+
+   ```bash
+   cd MoneyMate
+   ```
+
+3. Restore dependencies:
 
    ```bash
    dotnet restore
    ```
 
-3. Install the EF Core CLI tool if it is not already installed:
-
-   ```bash
-   dotnet tool install --global dotnet-ef
-   ```
-
-4. Create the SQLite database using the existing migrations:
-
-   ```bash
-   dotnet ef database update
-   ```
-
-5. Start the application:
+4. Start the application:
 
    ```bash
    dotnet run
    ```
 
-6. Open the local URL shown in the terminal.
+5. Open the local URL shown in the terminal.
+
+### Database Setup
+
+MoneyMate uses SQLite for data storage.
+
+The database and its tables are automatically created using Entity Framework Core migrations when the application starts.
+
+No manual database setup is required.
+
+The database starts empty, allowing users to add their own transactions and budgets.
+
+## 🧪 Testing
+
+The application has been manually tested to verify:
+
+- Transaction creation, editing, deletion, and filtering.
+- Monthly budget management.
+- Dashboard calculations and financial charts.
+- Month and year filtering.
+- Input validation.
+
+All 14 functional tests passed after debugging.
+
+## 🔮 Future Improvements
+
+Possible improvements include user authentication, individual user accounts, and exporting financial reports.
+
+## 🎥 Demo
+
+[▶ Watch the MoneyMate Demo on YouTube](https://www.youtube.com/watch?v=Q9am8s1yUKE)
