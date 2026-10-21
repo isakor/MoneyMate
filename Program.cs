@@ -20,6 +20,15 @@ builder.Services.AddScoped<IBudgetRepository, BudgetRepository>();
 
 var app = builder.Build();
 
+// Automatically create and update the SQLite database
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider
+        .GetRequiredService<MoneyMateDbContext>();
+
+    context.Database.Migrate();
+}
+
 // Configure error handling
 if (!app.Environment.IsDevelopment())
 {
