@@ -1,0 +1,29 @@
+
+# .NET build files
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Local configuration and secrets
+appsettings.Development.json
+.env
+.env.*
+
+# Log files
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
